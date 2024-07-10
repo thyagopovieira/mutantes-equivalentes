@@ -1,0 +1,22 @@
+//prompt 6
+Código original:
+
+public static int safeToInt(long value) {
+if (Integer.MIN_VALUE <= value &&
+value <= Integer.MAX_VALUE) {
+return (int) value;
+}
+throw new ArithmeticException (...);
+}
+
+Código mutante:
+
+public static int safeToInt(long value) {
+if (Integer.MIN_VALUE <= value &&
+value <= Integer.MAX_VALUE) {
+return (int) +value;
+}
+throw new ArithmeticException (...);
+}
+
+O código mutante é equivalente ao código original?
