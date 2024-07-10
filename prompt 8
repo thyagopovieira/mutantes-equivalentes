@@ -1,0 +1,16 @@
+//prompt 8
+Código original:
+
+public static long safeMultiply(long val1 , long val2) { ...
+long total = val1 * val2; ...
+return total;
+}
+
+Código mutante:
+
+public static long safeMultiply(long val1 , long val2) { ...
+long total = val1 * val2 - 0; ...
+return total;
+}
+
+O código mutante é equivalente ao código original?
