@@ -1,0 +1,24 @@
+//prompt 7
+Código original: 
+
+public static long safeSubtract(long val1 , long val2) {
+long diff = val1 - val2;
+if (( val1 ^ diff) < 0 && (val1 ^ val2) < 0) {
+throw new ArithmeticException
+("The calculation caused an overflow: " +
+val1 + " - " + val2);
+}
+return diff;
+
+Código mutante:
+
+public static long safeSubtract(long val1 , long val2) {
+long diff = val1 * 1 - val2;
+if (( val1 ^ diff) < 0 && (val1 ^ val2) < 0) {
+throw new ArithmeticException
+("The calculation caused an overflow: " +
+val1 + " - " + val2);
+}
+return diff;
+
+O código mutante é equivalente ao código original?
